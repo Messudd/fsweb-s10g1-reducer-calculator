@@ -2,7 +2,10 @@ export const calculateActions = {
   ADD_ONE :'ADD_ONE',
   APPLY_NUMBER : "APPLY_NUMBER",
   CHANGE_OPERATION : "CHANGE_OPERATION",
-  CLEAR : 'CLEAR_DİSPLAY'
+  CLEAR : 'CLEAR_DİSPLAY',
+  MEMORY: 'TAKE_MEMORY',
+  UPDATE_TOTAL : 'GET-MEMORY',
+  CLEAR_M : 'CLEAR_MEMORY'
 }
 
 export const addOne = () => {
@@ -17,4 +20,13 @@ export const changeOperationCalculate = (operation) => {
 }
 export const deleteCalculate = () => {
   return ({type: calculateActions.CLEAR});
+}
+export const calculateMemory = () => {
+  return ({type: calculateActions.MEMORY});
+}
+export const writeTotalFromMemory = () => {
+  return ({type: calculateActions.UPDATE_TOTAL});
+}
+export const clearMemory = () => {
+  return ({type: calculateActions.CLEAR_M});
 }

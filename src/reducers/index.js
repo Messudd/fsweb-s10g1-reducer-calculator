@@ -40,7 +40,15 @@ const reducer = (state = initialState, action) => {
       });
     case (calculateActions.CLEAR):
         return ({...initialState, total:0 , memory:0});
-    
+
+    case (calculateActions.MEMORY):
+          return ({...state ,memory:state.total});
+
+    case (calculateActions.UPDATE_TOTAL):
+          return ({...state ,total:state.memory});
+          
+    case (calculateActions.CLEAR_M):
+      return ({...state ,memory : 0});
     default:
       return state;
   }
